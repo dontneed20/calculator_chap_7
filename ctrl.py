@@ -19,16 +19,39 @@ class Control:
         self.view.btn2.clicked.connect(self.view.clearMessage)
         
     def sum(self, a, b):
-            return a+b
-    
+        return a+b
+        
     def sub(self, a, b):
-       return a-b
-
+        return a-b
+    
     def mul(self, a, b):
-        return a*b  
-
+        return a*b
+    
     def div(self, a, b):
+        try:
+            if(b==0):
+                raise Exception("Divisor Error")
+            
+        except Exception as e:
+            return e
+        
         return a/b
     
     def pow(self, a, b):
+<<<<<<< HEAD
         return pow(a, b)
+    
+=======
+        try:
+           if (a==0):
+                raise Exception("Base Error")
+<<<<<<< HEAD
+        return pow(a, b)
+>>>>>>> e1fb3a7 (modify pow function to check base)
+=======
+                
+        except Exception as e:
+            return e
+        
+        return pow(a, b)   
+>>>>>>> 6c790d9 (modify pow function using exception)
